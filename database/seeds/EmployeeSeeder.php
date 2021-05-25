@@ -26,8 +26,8 @@ class EmployeeSeeder extends Seeder
             'father_name' => '',
             'current_address' => '',
             'permanent_address' => '',
-            'formalities' => '',
-            'offer_acceptance' => '',
+            'formalities' => null,
+            'offer_acceptance' => null,
             'probation_period' => '',
             'date_of_confirmation' => null,
             'department' => '',
@@ -36,11 +36,11 @@ class EmployeeSeeder extends Seeder
             'bank_name' => '',
             'ifsc_code' => '',
             'pf_account_number' => '',
-            'pf_status' => '',
+            'pf_status' => null,
             'date_of_resignation' => null,
             'notice_period' => '',
-            'last_working_day' => '',
-            'full_final' => '',
+            'last_working_day' => null,
+            'full_final' => null,
             'user_id' => '1'
         ]);
     }
