@@ -1,5 +1,5 @@
 <?php
-
+    $DATABASE_URL=parse_url('postgres://smjfuadhyvvuds:a1d3751bcd5e08155d728b0fac0b90c57b5fe480413dd1d662a951226f73fde1@ec2-52-23-45-36.compute-1.amazonaws.com:5432/d9qosc1rf35h0m');
 return [
 
     /*
@@ -26,7 +26,8 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    //'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'pgsql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -66,13 +67,25 @@ return [
             'engine' => null,
         ],
 
-        'pgsql' => [
+        /*'pgsql' => [
             'driver' => 'pgsql',
             'host' => env('DB_HOST', 'localhost'),
             'port' => env('DB_PORT', '5432'),
             'database' => env('DB_DATABASE', 'forge'),
             'username' => env('DB_USERNAME', 'forge'),
             'password' => env('DB_PASSWORD', ''),
+            'charset' => 'utf8',
+            'prefix' => '',
+            'schema' => 'public',
+        ],*/
+        'pgsql' => [
+            'driver' => 'pgsql',
+            'host' => env('DB_HOST', 'ec2-52-23-45-36.compute-1.amazonaws.com'),
+            'port' => env('DB_PORT', '5432'),
+            'database' => env('DB_DATABASE', 'd9qosc1rf35h0m'),
+            'username' => env('DB_USERNAME', 'smjfuadhyvvuds'),
+            'password' => env('DB_PASSWORD', '
+a1d3751bcd5e08155d728b0fac0b90c57b5fe480413dd1d662a951226f73fde1'),
             'charset' => 'utf8',
             'prefix' => '',
             'schema' => 'public',
